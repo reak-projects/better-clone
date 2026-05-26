@@ -1,0 +1,408 @@
+.calculatorWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.titleSection {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--better-green);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--better-text-secondary);
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Big Display */
+.displaySection {
+  background-color: #f4f6f5;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.displayLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.displayLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--better-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.monthlyPayment {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--better-green);
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .monthlyPayment {
+    font-size: 40px;
+  }
+}
+
+.displayRight {
+  display: flex;
+  gap: 16px;
+}
+
+.preApprovedBtn {
+  background-color: var(--better-green);
+  color: var(--better-white);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 71, 81, 0.15);
+}
+
+.preApprovedBtn:hover {
+  background-color: var(--better-accent);
+  transform: translateY(-1px);
+}
+
+/* Two Column Layout */
+.calculatorGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 1024px) {
+  .calculatorGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* Inputs Side */
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--better-text);
+}
+
+.inputValueBox {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--better-text);
+  padding: 12px 16px;
+  background-color: var(--better-white);
+  border: 1px solid var(--better-border);
+  border-radius: 8px;
+  width: 180px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.inputValueBox input {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-align: right;
+  width: 100%;
+  outline: none;
+}
+
+/* Down payment inputs */
+.downPaymentRow {
+  display: flex;
+  gap: 12px;
+  width: 240px;
+}
+
+.dpDollarBox {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--better-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  background-color: var(--better-white);
+}
+
+.dpDollarBox input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  text-align: right;
+}
+
+.dpPercentBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--better-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  background-color: var(--better-white);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.dpPercentBox input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  text-align: right;
+}
+
+/* Sliders */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--better-border);
+  outline: none;
+  transition: background 0.15s ease;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--better-green);
+  cursor: pointer;
+  border: 4px solid var(--better-white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--better-green);
+  cursor: pointer;
+  border: 4px solid var(--better-white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Secondary Inputs Row */
+.secInputsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.selectBox {
+  padding: 12px 16px;
+  border: 1px solid var(--better-border);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--better-text);
+  background-color: var(--better-white);
+  outline: none;
+  cursor: pointer;
+}
+
+.zipBox {
+  padding: 12px 16px;
+  border: 1px solid var(--better-border);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--better-text);
+  background-color: var(--better-white);
+  outline: none;
+}
+
+/* Charts & Breakdown Side */
+.breakdownContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.chartBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 280px;
+}
+
+.donutSvg {
+  width: 220px;
+  height: 220px;
+  transform: rotate(-90deg);
+}
+
+.donutSegment {
+  fill: transparent;
+  stroke-width: 20;
+  transition: stroke-dasharray 0.3s ease, stroke-dashoffset 0.3s ease;
+}
+
+.chartCenterText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartCenterLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--better-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chartCenterVal {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--better-green);
+}
+
+/* Items List */
+.breakdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.breakdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: var(--better-white);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.itemDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.itemName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--better-text);
+}
+
+.itemVal {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--better-text);
+}
+
+/* FAQ / Content Section */
+.faqSection {
+  border-top: 1px solid var(--better-border);
+  padding-top: 64px;
+  margin-top: 64px;
+}
+
+.faqTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--better-green);
+  margin-bottom: 32px;
+}
+
+.faqItem {
+  margin-bottom: 32px;
+}
+
+.faqQuestion {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--better-text);
+  margin-bottom: 12px;
+}
+
+.faqAnswer {
+  font-size: 15px;
+  color: var(--better-text-secondary);
+  line-height: 1.6;
+}
+
+.formulaBox {
+  background-color: #f4f6f5;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 16px;
+  font-family: monospace;
+  font-size: 14px;
+  color: var(--better-green);
+  border-left: 4px solid var(--better-green);
+  line-height: 1.5;
+}

@@ -1,0 +1,229 @@
+.startPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--better-bg);
+  color: var(--better-text);
+  position: relative;
+}
+
+/* Progress bar at the very top */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #e2e8f0;
+  z-index: 1000;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--better-green-light);
+  width: 33.3%; /* Starting step progress */
+  transition: width 0.3s ease;
+}
+
+/* Simplified Header */
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: var(--better-bg);
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0 20px;
+    height: 70px;
+  }
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  fill: var(--better-green);
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--better-green);
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid var(--better-border);
+  border-radius: 50px;
+}
+
+.phoneLink:hover {
+  background-color: rgba(0, 71, 51, 0.04);
+  border-color: var(--better-green);
+}
+
+/* Question Flow Main Area */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  max-width: 650px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Avatar Betsy Styling */
+.avatarSection {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--better-green) 0%, var(--better-accent) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--better-white);
+  font-size: 32px;
+  font-weight: 700;
+  border: 4px solid var(--better-white);
+  box-shadow: 0 10px 25px rgba(0, 71, 51, 0.15);
+  position: relative;
+}
+
+.onlineIndicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--better-green-light);
+  border: 3px solid var(--better-white);
+  border-radius: 50%;
+}
+
+.question {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--better-text);
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+  .question {
+    font-size: 26px;
+  }
+}
+
+/* Selection Cards Container */
+.cardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.optionCard {
+  background-color: var(--better-white);
+  border: 2px solid var(--better-border);
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.optionCard:hover {
+  border-color: var(--better-green);
+  box-shadow: 0 10px 20px rgba(0, 71, 51, 0.05);
+  transform: translateY(-2px);
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  background-color: #f4f6f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--better-green);
+  font-size: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.optionCard:hover .iconWrapper {
+  background-color: rgba(0, 71, 51, 0.08);
+}
+
+.cardLabel {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--better-text);
+}
+
+.arrowIcon {
+  color: var(--better-border);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.optionCard:hover .arrowIcon {
+  color: var(--better-green);
+  transform: translateX(4px);
+}
+
+/* Stats Footer */
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 32px 24px;
+  background-color: var(--better-white);
+}
+
+.footerContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--better-green);
+  margin-bottom: 4px;
+}
+
+.statDesc {
+  font-size: 13px;
+  color: var(--better-text-secondary);
+  font-weight: 500;
+}
