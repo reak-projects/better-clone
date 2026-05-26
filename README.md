@@ -1,40 +1,349 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Better.com Replica – React Intern Assignment
 
-## Getting Started
+A fully responsive **multi-page web application** built using **React + Next.js**, replicating the design and core functionality of selected pages from the Better.com website. This project was developed as part of the React Intern selection process to demonstrate front-end development, reusable component architecture, routing, responsiveness, form handling, and deployment skills.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+**Deployed URL:** https://your-vercel-link.vercel.app
+
+## 💻 GitHub Repository
+**Repository Link:** https://github.com/your-username/better-com-replica
+
+---
+
+# 📌 Project Overview
+
+This project recreates four important pages from the Better.com website while maintaining a responsive layout, reusable React components, and clean scalable architecture.
+
+The focus of this project includes:
+
+- Next.js App Router
+- Responsive UI development
+- Reusable component-based architecture
+- Mortgage calculation logic
+- Multi-step form handling
+- State management
+- Deployment workflow
+- Clean project structure
+
+---
+
+# 🌐 Pages Implemented
+
+## 1. Home Page (`/`)
+Replicated Better.com landing page design including:
+
+- Responsive Navbar
+- Hero Section
+- CTA Buttons
+- Feature Cards
+- Informational Sections
+- Footer
+- Mobile Responsive Layout
+
+---
+
+## 2. About Us Page (`/about-us`)
+Replicated informational company layout:
+
+- Company Introduction
+- Mission & Vision Section
+- Values Section
+- Statistics / Highlight Cards
+- Responsive Layout
+- Footer
+
+---
+
+## 3. Mortgage Calculator (`/mortgage-calculator`)
+Interactive mortgage calculator with live calculation updates.
+
+### Features:
+- Home Price Input
+- Down Payment
+- Interest Rate
+- Loan Term
+- Property Tax
+- Home Insurance
+- ZIP Code
+- Monthly Mortgage Estimate
+- Payment Breakdown
+- Real-Time Calculation
+
+### Mortgage Formula Used
+
+\[
+M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}
+\]
+
+Where:
+
+- **P** = Principal loan amount
+- **r** = Monthly interest rate
+- **n** = Number of months
+- **M** = Monthly mortgage payment
+
+---
+
+## 4. Start Page (`/start`)
+Multi-step mortgage pre-qualification flow.
+
+### Features:
+- Step-by-step form
+- Next / Previous navigation
+- Progress bar
+- Input validation
+- Summary page
+- Responsive design
+
+---
+
+# ✨ Key Features
+
+### Routing
+- Multi-page routing using Next.js App Router
+
+### Reusable Components
+- Navbar
+- Footer
+- Hero Section
+- Cards
+- Buttons
+- Input Fields
+- Progress Bar
+- Mortgage Calculator
+- Multi-Step Form
+
+### Responsive Design
+Optimized for:
+- Desktop
+- Tablet
+- Mobile
+
+### Form Handling
+- Controlled inputs
+- Validation
+- Multi-step state handling
+
+### Mortgage Logic
+- Real-time EMI calculations
+- Principal + Interest breakdown
+- Tax + Insurance calculations
+
+### Deployment
+- Hosted on Vercel
+
+---
+
+# 🛠 Tech Stack
+
+- **Next.js 14**
+- **React.js**
+- **TypeScript**
+- **Tailwind CSS**
+- **CSS Modules / SCSS**
+- **Framer Motion (optional)**
+- **Git & GitHub**
+- **Vercel**
+
+---
+
+# 📂 Folder Structure
+
+```bash
+src/
+├── app/
+│   ├── page.tsx
+│   ├── about-us/
+│   │   └── page.tsx
+│   ├── mortgage-calculator/
+│   │   └── page.tsx
+│   └── start/
+│       └── page.tsx
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Cards.tsx
+│   ├── MortgageCalculator.tsx
+│   ├── MultiStepForm.tsx
+│   ├── ProgressBar.tsx
+│   └── InputField.tsx
+│
+├── lib/
+│   └── mortgage.ts
+│
+├── styles/
+│
+├── utils/
+│
+└── public/
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/better-com-replica.git
+```
+
+### 2. Navigate into Project
+
+```bash
+cd better-com-replica
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application will run on:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+# 🔨 Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# 🚀 Deployment Process
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+This project is deployed using **Vercel**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deployment steps:
 
-## Deploy on Vercel
+1. Push project to GitHub
+2. Connect repository to Vercel
+3. Import project
+4. Auto deploy
+5. Get live production URL
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+# 📸 Screenshots
+
+## Home Page
+![Home Page](./screenshots/home.png)
+
+## About Us Page
+![About Us](./screenshots/about.png)
+
+## Mortgage Calculator
+![Mortgage Calculator](./screenshots/calculator.png)
+
+## Start Page
+![Start Page](./screenshots/start.png)
+
+---
+
+# 📈 Performance Optimizations
+
+Implemented optimizations:
+
+- Reusable component-based architecture
+- Minimal re-renders
+- Clean state handling
+- Responsive-first UI design
+- Scalable folder structure
+- Optimized routing with Next.js
+
+---
+
+# 🧩 Challenges Faced
+
+During development, some key challenges included:
+
+- Replicating Better.com layout closely
+- Making UI responsive across devices
+- Implementing mortgage calculations accurately
+- Managing multi-step form state
+- Building reusable components without duplication
+
+---
+
+# 📚 Learning Outcomes
+
+This project helped strengthen skills in:
+
+- React.js component architecture
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Form handling
+- State management
+- UI replication
+- Responsive web development
+- Git & GitHub workflow
+- Deployment using Vercel
+
+---
+
+# 🔮 Future Improvements
+
+Potential improvements:
+
+- Dark Mode
+- Better animations
+- Charts for mortgage insights
+- Persistent form storage
+- API integration
+- Authentication
+- Backend integration
+
+---
+
+# ✅ Assignment Requirements Covered
+
+✔ React + Next.js Application  
+✔ Multi-Page Routing  
+✔ Better.com UI Replica  
+✔ Mortgage Calculator  
+✔ Interactive Forms  
+✔ Responsive Design  
+✔ Reusable Components  
+✔ Styling  
+✔ Deployment  
+✔ GitHub Repository
+
+---
+
+# 📤 Submission Details
+
+**Assignment Name:** Better.com Replica – React Intern Assignment  
+**Tech Stack:** React + Next.js  
+**Deployment Platform:** Vercel  
+**Version Control:** Git & GitHub
+
+---
+
+# 👨‍💻 Author
+
+**Your Name**  
+GitHub: https://github.com/your-username  
+Portfolio: https://your-portfolio-link.com
+
+---
+
+# 📄 License
+
+This project was created for educational and internship evaluation purposes only. All design references belong to Better.com.# better-clone
