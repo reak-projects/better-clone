@@ -5,10 +5,10 @@ A fully responsive **multi-page web application** built using **React + Next.js*
 ---
 
 ## 🚀 Live Demo
-**Deployed URL:** https://your-vercel-link.vercel.app
+**Deployed URL:** https://better-clone-xi.vercel.app/
 
 ## 💻 GitHub Repository
-**Repository Link:** https://github.com/your-username/better-com-replica
+**Repository Link:** https://github.com/reak-projects/better-com-replica
 
 ---
 
